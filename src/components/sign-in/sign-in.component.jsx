@@ -1,6 +1,9 @@
 import React from "react";
 
 import FormInput from "../form-imput/form-imput.component";
+import CustomButton from '../custom-button.component/custom-button.component';
+
+import {signInWithGoogle} from '../../firebase/forebase.utils';
 
 import "./signIn.styles.scss";
 class SignIn extends React.Component {
@@ -50,7 +53,8 @@ class SignIn extends React.Component {
             required
           />
           
-          <input type="submit" value="Submit Form" />
+          <CustomButton type="submit"> Sign in </CustomButton>
+    <CustomButton onClick={signInWithGoogle}> {' '}Sign in with Google {' '} </CustomButton>
         </form>
       </div>
     );
